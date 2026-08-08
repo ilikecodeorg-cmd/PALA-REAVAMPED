@@ -87,7 +87,7 @@ Clone and run P.A.L.A. directly out of your local dev virtual environment:
 
 ```bash
 #1. Clone the Revamped core
-git clone https://github.com/ilikecodeorg-cmd/PALA-REAVAMPED
+git clone https://github.com/ilikecodeorg-cmd/PALA-REVAMPED
 
 # 2. Switch to your project workspace directory
 cd ~/PALA-REVAMPED
