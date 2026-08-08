@@ -86,13 +86,13 @@ ollama run qwen2.5:3b
 Clone and run P.A.L.A. directly out of your local dev virtual environment:
 
 ```bash
-# 1. Switch to your project workspace directory
-cd ~/PALA-REVAMPED
-
-#2. Clone the Revamped core
+#1. Clone the Revamped core
 git clone https://github.com/ilikecodeorg-cmd/PALA-REAVAMPED
 
-# 2. Fire up the master Python orchestrator node file
+# 2. Switch to your project workspace directory
+cd ~/PALA-REVAMPED
+
+# 3. Fire up the master Python orchestrator node file
 python3 devtestagent.py
 ```
 
