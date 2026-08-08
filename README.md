@@ -84,7 +84,7 @@ Clone and run P.A.L.A. directly out of your local dev virtual environment:
 
 ```bash
 # 1. Switch to your project workspace directory
-cd ~/ai-agent
+cd ~/PALA-REVAMPED
 
 # 2. Fire up the master Python orchestrator node file
 python3 devtestagent.py
