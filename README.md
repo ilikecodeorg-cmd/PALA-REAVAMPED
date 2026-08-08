@@ -75,7 +75,10 @@ Ensure your local host has the underlying engine capabilities installed:
 # 1. Install local system audio synthesis tools and tkinter graphical rendering engines
 sudo apt update && sudo apt install -y speech-dispatcher tk libreadline-dev curl libnotify-bin
 
-# 2. Deploy your Ollama microservice local endpoint model
+# 2. Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 3. Deploy your Ollama microservice local endpoint model
 ollama run qwen2.5:3b
 ```
 
@@ -85,6 +88,9 @@ Clone and run P.A.L.A. directly out of your local dev virtual environment:
 ```bash
 # 1. Switch to your project workspace directory
 cd ~/PALA-REVAMPED
+
+#2. Clone the Revamped core
+git clone https://github.com/ilikecodeorg-cmd/PALA-REAVAMPED
 
 # 2. Fire up the master Python orchestrator node file
 python3 devtestagent.py
