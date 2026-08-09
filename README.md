@@ -1,4 +1,4 @@
-# P.A.L.A. REVAMPED (Personal Assistant Linux Automation)
+# P.A.L.A. REVAMPED (Personal AI Linux Agent)
 
 [![License: MIT](https://shields.io)](https://opensource.org)
 [![Python: 3.10+](https://shields.io)](https://python.org)
