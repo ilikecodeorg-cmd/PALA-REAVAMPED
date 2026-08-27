@@ -1,108 +1,91 @@
-# P.A.L.A. REVAMPED (Personal AI Linux Agent)
+# 🚀 P.A.L.A. - Workspace Active Environment (REVAMPED)
 
-[![License: MIT](https://shields.io)](https://opensource.org)
-[![Python: 3.10+](https://shields.io)](https://python.org)
-[![Ollama: qwen2.5:3b](https://shields.io)](https://ollama.com)
-
-P.A.L.A. Revamped is a highly optimized, fully autonomous local Linux System Administration assistant framework. Built using a thread-isolated dual-channel system, it merges a plain-text terminal listener routine with an animated Tkinter graphical dashboard interface. 
-
-Equipped with long-term relational memory layers, absolute short-code macro bypass channels, and dynamic loop sentry guards, P.A.L.A. safely automates package management, process scheduling, network firewall tracking, and microservices telemetry analysis without ever risking terminal lockups or frozen interaction tracks.
+[**English**](#english) | [**Português (Brasil)**](#português-brasil)
 
 ---
 
-## 🚀 Core Architectural Engine Features
+## English
 
-* **🧠 Intent Evaluation Sentry**: Evaluates the linguistic parameters of inputs instantly. Conversational prompts, text greetings, or casual statements (e.g., *"Hello PALA!"*) are automatically redirected away from terminal execution blocks, preventing unnecessary arbitrary filesystem mutations.
-* **⚡ Decoupled Direct Pipeline Routing**: Absolute short-code slash macros forcefully bypass the large language model's inference cycles entirely. Commands are passed directly onto high-speed background thread subprocess workers to update logs instantly.
-* **💾 Relational Database Memory Core**: Implements a persistent SQLite storage layer (`pala_devtest_cache.db`) that records historical execution counts, parameters, and long-term user constraints that hot-reload smoothly across system reboots.
-* **🛡️ Dynamic Sentry Loop Counter Shields**: Monitors sequential tool use interactions. If a local model gets trapped processing messy, infinite stdout buffers past Step 3, the shield forcefully drops the loop thread and returns the UI cleanly to standby configurations.
-* **🗣️ Thread-Isolated Text-To-Speech Driver**: Built-in `spd-say` auditory synthesis pipelines function on separate async workers, ensuring speech runtime audio plays smoothly while syncing with face canvas vector mouth movements.
-* **⚠️ Adaptive Hardware Resource Sentry**: Continuously monitors host allocation tables (/proc/meminfo, thermal zones). Exceeding defined limits automatically triggers a native desktop overlay alert (`notify-send`) and changes the interface face grid color map to emergency crimson.
+The **P.A.L.A. (Personal Assistant & Logical Agent)** is a modular ecosystem for automation, system telemetry, and embedded artificial intelligence, running natively and ultra-lightweight over the **Lubuntu LXQt** environment. 
 
----
+This revamped version expands the agent's capabilities by introducing autonomous game modules based on **Deep Reinforcement Learning (DRL)** and algorithmic logic, fully integrated with an internationalized (I18N) architecture.
 
-## 🕹️ Production Short-Code Slash Macros Pool
+### 🧠 New Artificial Intelligence Architectures
 
-| Slash Command Macro | Executed Under-the-Hood Shell Action | Output Target & Sentry Routine Impact |
+#### 🏓 1. Terminal Pong via Deep Reinforcement Learning (DRL)
+The agent now features a physical Pong arena rendered in pure ASCII text that connects directly to a **Deep Q-Network (DQN)** built with **PyTorch**.
+* **Vision Engine:** Converts the terminal text matrix into an `84x84` pixel visual frame processed by **Convolutional Layers (CNN)**.
+* **Decision Making:** Uses an adaptive **Epsilon-Greedy** strategy to balance random exploration and decisions based on accumulated rewards.
+* **Game Modes:** Supports autonomous simulation (AI vs Bot) and interactive arcade mode (Human vs AI) using the `curses` library for real-time keystroke tracking.
+
+#### ♟️ 2. Heuristic Tactical Chess Engine
+An integrated chess module that manages the official rules of the International Chess Federation via the `chess` library, running entirely in the virtual environment's RAM.
+* **Decision Tree:** Uses a **1-level depth Mini-Max algorithm** that analyzes the material balance of pieces and prioritizes tactical captures instantly.
+* **Low-Impact Renderer:** Forces the board matrix to redraw in universal characters directly to the console buffer on every move.
+
+### 🌐 Internationalization (I18N) & Voice Architecture
+The system features a centralized localization dictionary (`locale_config.py`) with native support for **Brazilian Portuguese (pt-br)** and **English (en)**.
+* **Data Persistence:** The operator's language preference is permanently saved in relational tables within the **SQLite** database.
+* **Adaptive Vocal Synthesizer:** The background voice engine (`spd-say`) reads the active language configuration and instantly switches the phonetic accent (American/Brazilian) and narrated strings on the speaker.
+
+### 🕹️ New Slash Commands
+Enter these fast shortcuts directly into the interactive `PALA-User >` prompt:
+
+| Command | Description | Behavior |
 | :--- | :--- | :--- |
-| `/syscheck` | `uname -a && uptime && df -h` | Logs system architecture specs, uptime data, and block metrics right to the GUI terminal panel frame. |
-| `/memclean` | `sudo sync && echo 3 \| sudo tee /proc/sys/vm/drop_caches` | Drops page caches, dentries, and inodes safely out of the active kernel allocation boundaries. |
-| `/aptcheck` | `apt list --upgradable` | Sweeps upstream repository indexes to fetch a list of available host package updates. |
-| `/cronlist` | `crontab -l` | Lists running user background timing automation scripts and repetitive tasks non-interactively. |
-| `/seccheck` | Isolate high-risk targets via `apt list` | Targets core packages (`openssh`, `openssl`, `systemd`, `linux-image`), compiles an advisory report inside `~/pala_security_audit.log`, and alerts the desktop user. |
-| `/perflog` | Pulls loads via `/proc/loadavg` & `free -m` | Captures CPU averages, memory allocation curves, and active machine uptimes to format a snapshot at `~/pala_performance_report.log`. |
-| `/netcheck` | `sudo ufw status verbose` \|\| `ss -tulpn` | Maps firewall profiles, tracking active port configurations and communication socket tables into `~/pala_network_audit.log`. |
-| `/dockercheck` | `docker ps -a` & `docker stats` | Sweeps background microservice environments, compiling container runtimes and hardware usage matrix graphs inside `~/pala_docker_telemetry.log`. |
+| `/language` | Toggles the global system language | Changes UI texts and switches `spd-say` accent (PT-BR/EN) |
+| `/play_pong` | Initializes the Pong DRL arena | Opens mode selector (Human vs AI or Auto Training) |
+| `/play_chess` | Opens the tactical chess board | Starts a match using classic UCI notation (e.g., `e2e4`) |
+| `/train_doom` | Starts visual DOOM automation | Executes X11 navigation macros inside GZDoom |
 
----
-
-## 📊 Structural Component Dataflow Map
-
-```text
-[Operator Prompt] ──► (Part 17 Readline Terminal Listener Thread)
-                            │
-            ┌───────────────┴───────────────┐
-            ▼                               ▼
-    [Slash Macro Trigger]          [Unstructured System Goal]
-            │                               │
-            ▼                               ▼
- (Part 18 Direct Bypass Workers)    (Part 16 Intent Router Sentry)
-            │                               │
-            │                       ┌───────┴───────┐
-            │                       ▼               ▼
-            │               [Conversational]   [Technical SysAdmin Task]
-            │                       │               │
-            ▼                       ▼               ▼
-   {Shell Subprocess}        { Warm Response }   (Part 15 Ollama API Bridge)
-            │                       │               │
-            └───────────────┬───────┴───────────────┘
-                            ▼
-     (Part 14 Canvas Multi-Skin Render & UI Component Core Panel)
-                            │
-            ┌───────────────┴───────────────┐
-            ▼                               ▼
- [Part 11 notify-send Alerts]   [Part 10 spd-say Async TTS Core Voice]
-```
-
----
-
-## 🛠️ Machine Workspace Environment Setup
-
-### 📋 Prerequisites
-Ensure your local host has the underlying engine capabilities installed:
-
+### 🛠️ Execution Requirements
+Ensure your local `.venv` has the core mathematical libraries updated for CPU processing:
 ```bash
-# 1. Install local system audio synthesis tools and tkinter graphical rendering engines
-sudo apt update && sudo apt install -y speech-dispatcher tk libreadline-dev curl libnotify-bin
-
-# 2. Install Ollama
-curl -fsSL https://ollama.com/install.sh | sh
-
-# 3. Deploy your Ollama microservice local endpoint model
-ollama run qwen2.5:3b
+source .venv/bin/activate
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
+pip install numpy opencv-python python-chess mss
 ```
-
-### 📦 Installation & Boot Steps
-Clone and run P.A.L.A. directly out of your local dev virtual environment:
-
-```bash
-#1. Clone the Revamped core
-git clone https://github.com/ilikecodeorg-cmd/PALA-REVAMPED
-
-# 2. Switch to your project workspace directory
-cd ~/PALA-REVAMPED
-
-# 3. Fire up the master Python orchestrator node file
-python3 devtestagent.py
-```
-
-### ⚙️ Interactive Slash Commands
-While the active terminal loop is waiting, use these built-in management short-codes:
-* `/settings`: Opens the TopLevel Tkinter popup configurations manager window to edit RAM boundary limits, flush relational logs, and toggle real-time log mirroring.
-* `/toggleconsole`: Instantly changes the mirroring level status to reflect active background data processes straight to stdout.
-* `quit` / `exit`: Discharges all active loop threads, cleans up database descriptors, and kills window frames cleanly.
 
 ---
 
-## 📄 License
-This application is distributed under the open-source **MIT License**. Check the full file tracking boundaries details for parameters.
+## Português (Brasil)
+
+O **P.A.L.A. (Personal Assistant & Logical Agent)** é um ecossistema modular de automação, telemetria de sistemas e inteligência artificial embarcada, rodando de forma nativa e ultra-leve sobre o ambiente **Lubuntu LXQt**.
+
+Esta nova versão expande as capacidades do agente com a introdução de módulos autônomos de jogos baseados em **Deep Reinforcement Learning (DRL)** e lógica algorítmica, operando de forma integrada a uma arquitetura internacionalizada (I18N).
+
+### 🧠 Novas Arquiteturas de Inteligência Artificial
+
+#### 🏓 1. Terminal Pong por Deep Reinforcement Learning (DRL)
+O agente agora possui uma arena física de Pong renderizada em texto ASCII que se conecta diretamente a uma rede **Deep Q-Network (DQN)** construída em **PyTorch**.
+* **Engine de Visão:** Transforma a matriz de texto do terminal em uma matriz visual de pixels `84x84` processada por **Camadas Convolucionais (CNN)**.
+* **Tomada de Decisão:** Utiliza a estratégia adaptativa **Epsilon-Greedy** para balancear exploração aleatória e tomadas de decisão baseadas em recompensas acumuladas.
+* **Modos de Jogo:** Suporta simulação autônoma (IA vs Bot) e modo arcade interativo (Humano vs IA) utilizando a biblioteca `curses` para inputs em tempo real.
+
+#### ♟️ 2. Motor Tático de Xadrez Heurístico
+Um módulo de xadrez integrado que gerencia as regras oficiais da Federação Internacional através da biblioteca `chess`, rodando inteiramente na memória RAM da máquina virtual.
+* **Árvore de Decisões:** Utiliza um algoritmo **Mini-Max de 1 nível de profundidade** que calcula o balanço material de peças e prioriza capturas táticas vantajosas instantaneamente.
+* **Renderizador de Baixo Impacto:** Força o redesenho da matriz do tabuleiro em caracteres universais direto no buffer do console a cada lance.
+
+### 🌐 Arquitetura de Internacionalização (I18N) e Voz BR
+O sistema agora conta com um dicionário de localização centralizado (`locale_config.py`) com suporte nativo e otimizado para **Português do Brasil (pt-br)** e **Inglês (en)**.
+* **Persistência de Dados:** A preferência de idioma do operador é salva de forma definitiva em tabelas relacionais do banco de dados **SQLite**.
+* **Sintetizador Vocal Adaptativo:** O motor de voz em segundo plano (`spd-say`) lê a chave de idioma ativa e altera instantaneamente o sotaque fonético (americano/brasileiro nativo) e as strings narradas no alto-falante.
+
+### 🕹️ Novos Comandos Absolutos (Slash Commands)
+Insira estes atalhos rápidos diretamente no prompt interativo `PALA-User >`:
+
+| Comando | Descrição | Comportamento |
+| :--- | :--- | :--- |
+| `/language` | Alterna o idioma global do sistema | Altera textos e chaveia o sotaque do `spd-say` (PT-BR/EN) |
+| `/play_pong` | Inicializa a arena DRL de Pong | Abre o seletor de modos (Humano vs IA ou Treino Automatizado) |
+| `/play_chess` | Abre o tabuleiro tático de xadrez | Inicia um confronto em notação UCI clássica (Ex: `e2e4`) |
+| `/train_doom` | Inicia a automação visual do DOOM | Executa macros sequenciais de navegação X11 no GZDoom |
+
+### 🛠️ Requisitos de Execução no Ambiente Virtual
+Garanta que a sua `.venv` local possua as bibliotecas matemáticas centrais atualizadas para CPU:
+```bash
+source .venv/bin/activate
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
+pip install numpy opencv-python python-chess mss
+```
