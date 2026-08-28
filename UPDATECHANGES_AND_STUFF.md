@@ -1,4 +1,4 @@
-VERSION 0.1.8
+## PALA MAIN-VERSION 0.1.8
 build(ai): anti-stagnation model architecture, telemetry hooks, and edge constraints
 
 - Added anti-stagnation logic in pong_terminal.py to counter policy network freezing.
