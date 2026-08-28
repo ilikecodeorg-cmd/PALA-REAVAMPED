@@ -1111,13 +1111,15 @@ def active_shell_talk_routine():
                 continue
 
             if user_prompt.lower() == "/settings":
-       if PALA_GUI_INSTANCE: PALA_GUI_INSTANCE.root.after(0, PALA_GUI_INSTANCE.display_settings_popup_window)
+                if PALA_GUI_INSTANCE: PALA_GUI_INSTANCE.root.after(0, PALA_GUI_INSTANCE.display_settings_popup_window)
                 continue
+
             if user_prompt.lower() == "/toggleconsole":
                 nxt = "False" if get_setting("terminal_console_visible", "False") == "True" else "True"
                 update_setting("terminal_console_visible", nxt)
                 print(f"[*] Configuration Toggle: Real-time console log mirroring set to {nxt}")
                 continue
+
             if user_prompt.lower() in ["exit", "quit"]:
                 if PALA_GUI_INSTANCE: PALA_GUI_INSTANCE.root.after(0, PALA_GUI_INSTANCE.root.destroy)
                 break
