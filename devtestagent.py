@@ -1037,8 +1037,9 @@ def active_shell_talk_routine():
             user_prompt = input("\033[92mPALA-User >\033[0m ").strip()
             if not user_prompt: continue
             
+            # =====================================================================
             # CORE APPLICATION ACTION SLASH COMMANDS
-            
+            # =====================================================================
             if user_prompt.lower() == "/language":
                 current_lang = get_setting("system_language", "pt")
                 next_lang = "en" if current_lang == "pt" else "pt"
@@ -1047,10 +1048,70 @@ def active_shell_talk_routine():
                     print("[*] Language set to English (en).")
                 else:
                     print("[*] Idioma definido para Português (pt).")
+                if PALA_GUI_INSTANCE:
+                    PALA_GUI_INSTANCE.lang_value_label.config(text=f"[{next_lang.upper()}]")
                 speak_text_async("v_lang_changed")
                 continue
+
+            if user_prompt.lower() == "/reset_brain":
+                print("\n=================================================================")
+                print("  🧹 P.A.L.A. COGNITIVE MEMORY PURGE ENGINE ")
+                print("=================================================================")
+                purged_any = False
+                for pth_file in ["pala_pong_brain.pth", "pala_doom_brain.pth"]:
+                    if os.path.exists(pth_file):
+                        try:
+                            os.remove(pth_file)
+                            print(f"  🗑️  Purged Successfully: '{pth_file}' (Memory reset to factory defaults)")
+                            purged_any = True
+                        except Exception as e:
+                            print(f"  ⚠️  Failed to delete '{pth_file}': {e}")
+                if not purged_any:
+                    print("  ✨ Environment is already clean. No active weight files detected.")
+                print("=================================================================\n")
+                continue
+
+            if user_prompt.lower() == "/brain":
+                print("\n=================================================================")
+                print("  🧠 P.A.L.A. COGNITIVE WEIGHTS LOGS (PYTORCH CORES) ")
+                print("=================================================================")
+                for pth_file in ["pala_pong_brain.pth", "pala_doom_brain.pth"]:
+                    if os.path.exists(pth_file):
+                        try:
+                            chk = torch.load(pth_file, map_location="cpu", weights_only=False)
+                            size_kb = os.path.getsize(pth_file) / 1024
+                            eps_saved = chk.get('epsilon', 1.0)
+                            print(f"  📂 File Target: {pth_file} ({size_kb:.1f} KB)")
+                            print(f"  🚀 Epsilon Active: {eps_saved:.3f} | Backend: PyTorch CPU Core")
+                        except Exception as e:
+                            print(f"  ⚠️  Error parsing state dict '{pth_file}': {e}")
+                    else:
+                        print(f"  ❌ Registry Not Found: '{pth_file}' (No weight files generated yet)")
+                print("=================================================================\n")
+                continue
+
+            if user_prompt.lower() == "/cpu":
+                import psutil
+                print("\n=================================================================")
+                print("  💻 HARDWARE MATRIX TELEMETRY - INTEL CORE i3-1115G4")
+                print("=================================================================")
+                freq = psutil.cpu_freq()
+                load_per_core = psutil.cpu_percent(percpu=True)
+                print(f"  🏎️  Core Clock Speed : Current: {freq.current:.2f}MHz | Max: {freq.max:.2f}MHz")
+                print(f"  📊 Compute Total Load: {psutil.cpu_percent()}% (Architecture: Tiger Lake 10nm)")
+                for idx, core_load in enumerate(load_per_core):
+                    print(f"     └── [Thread {idx}] Activity Level: {core_load}%")
+                try:
+                    temps = psutil.sensors_temperatures()
+                    acpi_temp = temps.get('coretemp', [None])[0].current if 'coretemp' in temps else 20.0
+                    print(f"  🔥 Silicon Die Temp : {acpi_temp}°C (Safe Threshold: < 85°C)")
+                except Exception:
+                    print("  🔥 Silicon Die Temp : 20.0°C (Simulated ACPI Fallback)")
+                print("=================================================================\n")
+                continue
+
             if user_prompt.lower() == "/settings":
-                if PALA_GUI_INSTANCE: PALA_GUI_INSTANCE.root.after(0, PALA_GUI_INSTANCE.display_settings_popup_window)
+       if PALA_GUI_INSTANCE: PALA_GUI_INSTANCE.root.after(0, PALA_GUI_INSTANCE.display_settings_popup_window)
                 continue
             if user_prompt.lower() == "/toggleconsole":
                 nxt = "False" if get_setting("terminal_console_visible", "False") == "True" else "True"
