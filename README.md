@@ -1,4 +1,4 @@
-# 🚀 P.A.L.A. - Workspace Active Environment (REVAMPED)
+# 🚀 P.A.L.A. - Personal AI Linux Agent (REVAMPED)
 
 [**English**](#english) | [**Português (Brasil)**](#português-brasil)
 
